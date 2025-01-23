@@ -56,7 +56,7 @@ const QuizGame = () => {
       <div className="font-serif flex flex-col items-center justify-center min-h-screen bg-gray-100">
         <h1 className="text-4xl font-bold">Congratulations! ✨🌸👏🎉</h1>
         <p className="text-2xl text-green-500 py-4">Your final score is: {score}</p>
-        <p className="text-lg black py-4 mx-36">"Assalam o Alaikum!
+        <p className="text-lg black py-4 mx-36">&quot;Assalam o Alaikum!
 
 Mere piyare students, yaad rakho ke zindagi ka har imtihaan humein aur behtar banane ke liye hota hai. Apni mehnat aur hosle se har mushkil ko asaan bana lo. Tumhare ander woh taaqat hai jo kisi bhi challenge ko jeet sakti hai.
 
@@ -65,7 +65,7 @@ Kabhi hope lose mat karna, kyunke haar aur jeet sirf ek soch ka naam hai. Mehnat
 Areeba Zafar (Student Leader) ki taraf se tum sab ko Best of Luck exams ke liye! Tum zarur kamyab hoge. Allah tumhare maqsad ko kamyabi se nawazay. 🌟✨
 
 Duaon ke saath,
-Areeba Zafar"</p>
+Areeba Zafar&quot;</p>
         <button
           className="mt-4 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
           onClick={resetQuiz}
