@@ -51,6 +51,13 @@ const QuizGame = () => {
     }
   };
 
+  const handleResetQuiz = () => {
+    // Reset the quiz state and clear local state
+    setAnswerStatus(null);
+    setCorrectAnswer(null);
+    resetQuiz();
+  };
+
   if (level === "completed") {
     return (
       <div className="font-serif flex flex-col items-center justify-center min-h-screen bg-gray-100">
@@ -68,7 +75,7 @@ Duaon ke saath,
 Areeba Zafar&quot;</p>
         <button
           className="mt-4 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
-          onClick={resetQuiz}
+          onClick={handleResetQuiz}
         >
           Play Again
         </button>
@@ -79,8 +86,12 @@ Areeba Zafar&quot;</p>
   return (
     <div className="font-serif flex flex-col items-center py-20 min-h-screen bg-gray-100 border m-20 rounded-lg shadow-lg">
       <p className="py-4">Prepared by: Areeba Zafar (Student Leader) Saturday 9 to 12</p>
-<h1 className="text-4xl text-center font-bold pb-2 mb-4 border-b-4 border-purple-500 ">MCQS of Next.js for Exams Preparation</h1>
-      <h2 className="text-2xl  font-bold">LEVEL: <span className="text-pink-600">{level.toUpperCase()}</span></h2>
+      <h1 className="text-4xl text-center font-bold pb-2 mb-4 border-b-4 border-purple-500 ">
+        MCQS of Next.js for Exams Preparation
+      </h1>
+      <h2 className="text-2xl  font-bold">
+        LEVEL: <span className="text-pink-600">{level.toUpperCase()}</span>
+      </h2>
       <h2 className="text-2xl mt-4">Question: {currentQuestion.question}</h2>
       <div className="mt-4">
         {currentQuestion.options.map((option, index) => (
@@ -89,13 +100,14 @@ Areeba Zafar&quot;</p>
             onClick={() => handleAnswer(option)}
             className={`block w-full my-2 px-4 py-2 rounded ${
               answerStatus === "correct" && option === currentQuestion.answer
-                ? "bg-blue-500" : answerStatus === "incorrect" && option === currentQuestion.answer
+                ? "bg-blue-500"
+                : answerStatus === "incorrect" && option === currentQuestion.answer
                 ? "bg-blue-500"
                 : "bg-blue-500"
             } text-white hover:bg-blue-600`}
           >
             <div className="flex gap-2">
-            <span>{index + 1})</span> <span>{option}</span>
+              <span>{index + 1})</span> <span>{option}</span>
             </div>
           </button>
         ))}
@@ -111,11 +123,16 @@ Areeba Zafar&quot;</p>
       {answerStatus === "incorrect" && correctAnswer && (
         <div className="mt-4">
           <p className="text-red-500">Wrong answer!❌</p>
-          <p className="text-yellow-500">The correct answer is: <span className="text-xl text-green-500">({correctAnswer})</span></p>
+          <p className="text-yellow-500">
+            The correct answer is:{" "}
+            <span className="text-xl text-green-500">({correctAnswer})</span>
+          </p>
         </div>
       )}
 
-      <p className="mt-4 text-2xl border px-12 py-2 border-blue-500 rounded-lg">Score: <span className="text-green-700">{score}</span></p>
+      <p className="mt-4 text-2xl border px-12 py-2 border-blue-500 rounded-lg">
+        Score: <span className="text-green-700">{score}</span>
+      </p>
     </div>
   );
 };
