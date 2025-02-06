@@ -2,7 +2,7 @@ export const questions = // Easy Level Questions
 [
   { level: "easy", question: "What is Next.js?", options: ["A backend framework", "A CSS library", "A React Framework", "A database"], answer: "A React Framework" },
   { level: "easy", question: "Which company maintains Next.js?", options: ["Vercel", "Google", "Amazon", "Facebook"], answer: "Vercel" },
-  { level: "easy", question: "What is the default file for defining routes in Next.js?", options: ["routes", "app", "pages", "src"], answer: "pages" },
+  { level: "easy", question: "What is the default folder for defining routes in Next.js 14?", options: ["routes", "app", "pages", "src"], answer: "app" },
   { level: "easy", question: "Which language is primarily used in Next.js?", options: ["Ruby", "JavaScript", "Python", "PHP"], answer: "JavaScript" },
   { level: "easy", question: "What is SSR in Next.js?", options: ["Server-Side Rendering", "State Synchronization Rendering", "Super Static Routing", "Shared Service Routing"], answer: "Server-Side Rendering" },
   { level: "easy", question: "What command is used to create a new Next.js project?", options: ["next start", "npm init next-app", "npx create-next-app", "npx init-next-app"], answer: "npx create-next-app" },
@@ -11,7 +11,7 @@ export const questions = // Easy Level Questions
   { level: "easy", question: "What file is used for global CSS in Next.js?", options: ["app/styles.css", "styles/global.js", "css/global.css", "styles/globals.css"], answer: "styles/globals.css" },
   { level: "easy", question: "What is the command to start a Next.js development server?", options: ["npm start", "npx next-start", "next-server", "npm run dev"], answer: "npm run dev" },
   { level: "easy", question: "How do you add a custom font in Next.js?", options: ["Import in _app.js", "Import in _document.js", "Modify the global CSS", "Use a plugin"], answer: "Import in _document.js" },
-  { level: "easy", question: "What is the file extension for a page in Next.js?", options: [".ts", ".jsx", ".tsx", ".js"], answer: ".tsx" },
+  { level: "easy", question: "What is the file extension for a page in Next.js (Using TypeScript) ?", options: [".ts", ".jsx", ".tsx", ".js"], answer: ".tsx" },
   { level: "easy", question: "Which of the following is used for static assets in Next.js?", options: ["/public", "/static", "/assets", "/data"], answer: "/public" },
   { level: "easy", question: "How do you install a Next.js project?", options: ["npm install react", "npx create-next-app", "npm install next", "npm install next.js"], answer: "npx create-next-app" },
   { level: "easy", question: "What does the 'next' command do?", options: ["Builds the app for production", "Installs dependencies", "Starts the Next.js server", "Opens the development mode"], answer: "Starts the Next.js server" },
